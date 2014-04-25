@@ -21,3 +21,4 @@ C:\Users\User\Documents\GitHub\Automerge_nevlabs\Automerge_nevlabs\obj\x86\Relea
 C:\Users\User\Documents\GitHub\Automerge_nevlabs\Automerge_nevlabs\obj\x86\Release\Automerge_nevlabs.csproj.GenerateResource.Cache
 C:\Users\User\Documents\GitHub\Automerge_nevlabs\Automerge_nevlabs\obj\x86\Release\Automerge_nevlabs.exe.manifest
 C:\Users\User\Documents\GitHub\Automerge_nevlabs\Automerge_nevlabs\obj\x86\Release\Automerge_nevlabs.application
+C:\Users\User\Documents\GitHub\Automerge_nevlabs\Automerge_nevlabs\bin\Release\LineNumbersControlForRichTextBox.dll

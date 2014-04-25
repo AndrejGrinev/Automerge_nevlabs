@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            AnimatorNS.Animation animation1 = new AnimatorNS.Animation();
+            AnimatorNS.Animation animation2 = new AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lineNumbersForRichText1 = new LineNumbersControlForRichTextBox.LineNumbersForRichText();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -52,6 +53,9 @@
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.animator1 = new AnimatorNS.Animator(this.components);
+            this.lineNumbersForRichText2 = new LineNumbersControlForRichTextBox.LineNumbersForRichText();
+            this.lineNumbersForRichText3 = new LineNumbersControlForRichTextBox.LineNumbersForRichText();
+            this.lineNumbersForRichText4 = new LineNumbersControlForRichTextBox.LineNumbersForRichText();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,9 +79,9 @@
             this.groupBox1.Controls.Add(this.button1);
             this.animator1.SetDecoration(this.groupBox1, AnimatorNS.DecorationType.None);
             this.groupBox1.Location = new System.Drawing.Point(4, 5);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(374, 218);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -88,7 +92,7 @@
             this.animator1.SetDecoration(this.button5, AnimatorNS.DecorationType.None);
             this.button5.Image = global::Automerge_nevlabs.Properties.Resources.Refresh1;
             this.button5.Location = new System.Drawing.Point(112, 9);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(20, 22);
             this.button5.TabIndex = 2;
@@ -102,15 +106,54 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.lineNumbersForRichText1);
             this.groupBox2.Controls.Add(this.richTextBox1);
             this.animator1.SetDecoration(this.groupBox2, AnimatorNS.DecorationType.None);
             this.groupBox2.Location = new System.Drawing.Point(4, 37);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(365, 176);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // lineNumbersForRichText1
+            // 
+            this.lineNumbersForRichText1.AutoSizing = true;
+            this.lineNumbersForRichText1.BackgroundGradientAlphaColor = System.Drawing.Color.Transparent;
+            this.lineNumbersForRichText1.BackgroundGradientBetaColor = System.Drawing.Color.LightSteelBlue;
+            this.lineNumbersForRichText1.BackgroundGradientDirection = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.lineNumbersForRichText1.BorderLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText1.BorderLinesStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbersForRichText1.BorderLinesThickness = 1F;
+            this.animator1.SetDecoration(this.lineNumbersForRichText1, AnimatorNS.DecorationType.None);
+            this.lineNumbersForRichText1.DockSide = LineNumbersControlForRichTextBox.LineNumbersForRichText.LineNumberDockSide.Left;
+            this.lineNumbersForRichText1.GridLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText1.GridLinesStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbersForRichText1.GridLinesThickness = 1F;
+            this.lineNumbersForRichText1.LineNumbersAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lineNumbersForRichText1.LineNumbersAntiAlias = true;
+            this.lineNumbersForRichText1.LineNumbersAsHexadecimal = false;
+            this.lineNumbersForRichText1.LineNumbersClippedByItemRectangle = true;
+            this.lineNumbersForRichText1.LineNumbersLeadingZeroes = true;
+            this.lineNumbersForRichText1.LineNumbersOffset = new System.Drawing.Size(0, 0);
+            this.lineNumbersForRichText1.Location = new System.Drawing.Point(5, 14);
+            this.lineNumbersForRichText1.Margin = new System.Windows.Forms.Padding(0);
+            this.lineNumbersForRichText1.MarginLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText1.MarginLinesSide = LineNumbersControlForRichTextBox.LineNumbersForRichText.LineNumberDockSide.Right;
+            this.lineNumbersForRichText1.MarginLinesStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.lineNumbersForRichText1.MarginLinesThickness = 1F;
+            this.lineNumbersForRichText1.Name = "lineNumbersForRichText1";
+            this.lineNumbersForRichText1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.lineNumbersForRichText1.ParentRichTextBox = this.richTextBox1;
+            this.lineNumbersForRichText1.SeeThroughMode = false;
+            this.lineNumbersForRichText1.ShowBackgroundGradient = true;
+            this.lineNumbersForRichText1.ShowBorderLines = true;
+            this.lineNumbersForRichText1.ShowGridLines = true;
+            this.lineNumbersForRichText1.ShowLineNumbers = true;
+            this.lineNumbersForRichText1.ShowMarginLines = true;
+            this.lineNumbersForRichText1.Size = new System.Drawing.Size(20, 155);
+            this.lineNumbersForRichText1.TabIndex = 1;
             // 
             // richTextBox1
             // 
@@ -118,10 +161,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.animator1.SetDecoration(this.richTextBox1, AnimatorNS.DecorationType.None);
-            this.richTextBox1.Location = new System.Drawing.Point(4, 14);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox1.Location = new System.Drawing.Point(26, 14);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(357, 155);
+            this.richTextBox1.Size = new System.Drawing.Size(335, 155);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -131,7 +174,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.animator1.SetDecoration(this.button1, AnimatorNS.DecorationType.None);
             this.button1.Location = new System.Drawing.Point(137, 9);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(232, 22);
             this.button1.TabIndex = 0;
@@ -149,9 +192,9 @@
             this.groupBox3.Controls.Add(this.button2);
             this.animator1.SetDecoration(this.groupBox3, AnimatorNS.DecorationType.None);
             this.groupBox3.Location = new System.Drawing.Point(382, 5);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(374, 218);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
@@ -162,7 +205,7 @@
             this.animator1.SetDecoration(this.button6, AnimatorNS.DecorationType.None);
             this.button6.Image = global::Automerge_nevlabs.Properties.Resources.Refresh1;
             this.button6.Location = new System.Drawing.Point(112, 9);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(20, 22);
             this.button6.TabIndex = 3;
@@ -176,12 +219,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox4.Controls.Add(this.lineNumbersForRichText2);
             this.groupBox4.Controls.Add(this.richTextBox2);
             this.animator1.SetDecoration(this.groupBox4, AnimatorNS.DecorationType.None);
             this.groupBox4.Location = new System.Drawing.Point(4, 37);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(365, 176);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
@@ -192,10 +236,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.animator1.SetDecoration(this.richTextBox2, AnimatorNS.DecorationType.None);
-            this.richTextBox2.Location = new System.Drawing.Point(4, 14);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox2.Location = new System.Drawing.Point(21, 14);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(357, 155);
+            this.richTextBox2.Size = new System.Drawing.Size(335, 155);
             this.richTextBox2.TabIndex = 0;
             this.richTextBox2.Text = "";
             // 
@@ -205,7 +249,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.animator1.SetDecoration(this.button2, AnimatorNS.DecorationType.None);
             this.button2.Location = new System.Drawing.Point(137, 9);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(232, 22);
             this.button2.TabIndex = 0;
@@ -223,9 +267,9 @@
             this.groupBox5.Controls.Add(this.button3);
             this.animator1.SetDecoration(this.groupBox5, AnimatorNS.DecorationType.None);
             this.groupBox5.Location = new System.Drawing.Point(4, 228);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(374, 218);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
@@ -236,7 +280,7 @@
             this.animator1.SetDecoration(this.button7, AnimatorNS.DecorationType.None);
             this.button7.Image = global::Automerge_nevlabs.Properties.Resources.Refresh1;
             this.button7.Location = new System.Drawing.Point(112, 9);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(20, 22);
             this.button7.TabIndex = 3;
@@ -250,12 +294,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox6.Controls.Add(this.lineNumbersForRichText3);
             this.groupBox6.Controls.Add(this.richTextBox3);
             this.animator1.SetDecoration(this.groupBox6, AnimatorNS.DecorationType.None);
             this.groupBox6.Location = new System.Drawing.Point(4, 37);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(365, 176);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
@@ -266,10 +311,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.animator1.SetDecoration(this.richTextBox3, AnimatorNS.DecorationType.None);
-            this.richTextBox3.Location = new System.Drawing.Point(4, 14);
-            this.richTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox3.Location = new System.Drawing.Point(26, 14);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(357, 155);
+            this.richTextBox3.Size = new System.Drawing.Size(335, 155);
             this.richTextBox3.TabIndex = 0;
             this.richTextBox3.Text = "";
             // 
@@ -279,7 +324,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.animator1.SetDecoration(this.button3, AnimatorNS.DecorationType.None);
             this.button3.Location = new System.Drawing.Point(137, 9);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(232, 22);
             this.button3.TabIndex = 0;
@@ -297,9 +342,9 @@
             this.groupBox7.Controls.Add(this.button4);
             this.animator1.SetDecoration(this.groupBox7, AnimatorNS.DecorationType.None);
             this.groupBox7.Location = new System.Drawing.Point(382, 228);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(374, 218);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
@@ -311,12 +356,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox8.Controls.Add(this.lineNumbersForRichText4);
             this.groupBox8.Controls.Add(this.richTextBox4);
             this.animator1.SetDecoration(this.groupBox8, AnimatorNS.DecorationType.None);
             this.groupBox8.Location = new System.Drawing.Point(4, 37);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox8.Size = new System.Drawing.Size(365, 176);
             this.groupBox8.TabIndex = 1;
             this.groupBox8.TabStop = false;
@@ -327,10 +373,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.animator1.SetDecoration(this.richTextBox4, AnimatorNS.DecorationType.None);
-            this.richTextBox4.Location = new System.Drawing.Point(4, 14);
-            this.richTextBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.richTextBox4.Location = new System.Drawing.Point(21, 14);
+            this.richTextBox4.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(357, 155);
+            this.richTextBox4.Size = new System.Drawing.Size(335, 155);
             this.richTextBox4.TabIndex = 0;
             this.richTextBox4.Text = "";
             // 
@@ -340,7 +386,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.animator1.SetDecoration(this.button4, AnimatorNS.DecorationType.None);
             this.button4.Location = new System.Drawing.Point(137, 9);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(232, 22);
             this.button4.TabIndex = 0;
@@ -352,24 +398,138 @@
             // 
             this.animator1.AnimationType = AnimatorNS.AnimationType.VertSlide;
             this.animator1.Cursor = null;
-            animation1.AnimateOnlyDifferences = false;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.animator1.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = false;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.animator1.DefaultAnimation = animation2;
             this.animator1.Interval = 100;
             this.animator1.MaxAnimationTime = 4500;
+            // 
+            // lineNumbersForRichText2
+            // 
+            this.lineNumbersForRichText2.AutoSizing = true;
+            this.lineNumbersForRichText2.BackgroundGradientAlphaColor = System.Drawing.Color.Transparent;
+            this.lineNumbersForRichText2.BackgroundGradientBetaColor = System.Drawing.Color.LightSteelBlue;
+            this.lineNumbersForRichText2.BackgroundGradientDirection = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.lineNumbersForRichText2.BorderLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText2.BorderLinesStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbersForRichText2.BorderLinesThickness = 1F;
+            this.animator1.SetDecoration(this.lineNumbersForRichText2, AnimatorNS.DecorationType.None);
+            this.lineNumbersForRichText2.DockSide = LineNumbersControlForRichTextBox.LineNumbersForRichText.LineNumberDockSide.Left;
+            this.lineNumbersForRichText2.GridLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText2.GridLinesStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbersForRichText2.GridLinesThickness = 1F;
+            this.lineNumbersForRichText2.LineNumbersAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lineNumbersForRichText2.LineNumbersAntiAlias = true;
+            this.lineNumbersForRichText2.LineNumbersAsHexadecimal = false;
+            this.lineNumbersForRichText2.LineNumbersClippedByItemRectangle = true;
+            this.lineNumbersForRichText2.LineNumbersLeadingZeroes = true;
+            this.lineNumbersForRichText2.LineNumbersOffset = new System.Drawing.Size(0, 0);
+            this.lineNumbersForRichText2.Location = new System.Drawing.Point(0, 14);
+            this.lineNumbersForRichText2.Margin = new System.Windows.Forms.Padding(0);
+            this.lineNumbersForRichText2.MarginLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText2.MarginLinesSide = LineNumbersControlForRichTextBox.LineNumbersForRichText.LineNumberDockSide.Right;
+            this.lineNumbersForRichText2.MarginLinesStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.lineNumbersForRichText2.MarginLinesThickness = 1F;
+            this.lineNumbersForRichText2.Name = "lineNumbersForRichText2";
+            this.lineNumbersForRichText2.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.lineNumbersForRichText2.ParentRichTextBox = this.richTextBox2;
+            this.lineNumbersForRichText2.SeeThroughMode = false;
+            this.lineNumbersForRichText2.ShowBackgroundGradient = true;
+            this.lineNumbersForRichText2.ShowBorderLines = true;
+            this.lineNumbersForRichText2.ShowGridLines = true;
+            this.lineNumbersForRichText2.ShowLineNumbers = true;
+            this.lineNumbersForRichText2.ShowMarginLines = true;
+            this.lineNumbersForRichText2.Size = new System.Drawing.Size(20, 155);
+            this.lineNumbersForRichText2.TabIndex = 1;
+            // 
+            // lineNumbersForRichText3
+            // 
+            this.lineNumbersForRichText3.AutoSizing = true;
+            this.lineNumbersForRichText3.BackgroundGradientAlphaColor = System.Drawing.Color.Transparent;
+            this.lineNumbersForRichText3.BackgroundGradientBetaColor = System.Drawing.Color.LightSteelBlue;
+            this.lineNumbersForRichText3.BackgroundGradientDirection = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.lineNumbersForRichText3.BorderLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText3.BorderLinesStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbersForRichText3.BorderLinesThickness = 1F;
+            this.animator1.SetDecoration(this.lineNumbersForRichText3, AnimatorNS.DecorationType.None);
+            this.lineNumbersForRichText3.DockSide = LineNumbersControlForRichTextBox.LineNumbersForRichText.LineNumberDockSide.Left;
+            this.lineNumbersForRichText3.GridLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText3.GridLinesStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbersForRichText3.GridLinesThickness = 1F;
+            this.lineNumbersForRichText3.LineNumbersAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lineNumbersForRichText3.LineNumbersAntiAlias = true;
+            this.lineNumbersForRichText3.LineNumbersAsHexadecimal = false;
+            this.lineNumbersForRichText3.LineNumbersClippedByItemRectangle = true;
+            this.lineNumbersForRichText3.LineNumbersLeadingZeroes = true;
+            this.lineNumbersForRichText3.LineNumbersOffset = new System.Drawing.Size(0, 0);
+            this.lineNumbersForRichText3.Location = new System.Drawing.Point(5, 14);
+            this.lineNumbersForRichText3.Margin = new System.Windows.Forms.Padding(0);
+            this.lineNumbersForRichText3.MarginLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText3.MarginLinesSide = LineNumbersControlForRichTextBox.LineNumbersForRichText.LineNumberDockSide.Right;
+            this.lineNumbersForRichText3.MarginLinesStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.lineNumbersForRichText3.MarginLinesThickness = 1F;
+            this.lineNumbersForRichText3.Name = "lineNumbersForRichText3";
+            this.lineNumbersForRichText3.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.lineNumbersForRichText3.ParentRichTextBox = this.richTextBox3;
+            this.lineNumbersForRichText3.SeeThroughMode = false;
+            this.lineNumbersForRichText3.ShowBackgroundGradient = true;
+            this.lineNumbersForRichText3.ShowBorderLines = true;
+            this.lineNumbersForRichText3.ShowGridLines = true;
+            this.lineNumbersForRichText3.ShowLineNumbers = true;
+            this.lineNumbersForRichText3.ShowMarginLines = true;
+            this.lineNumbersForRichText3.Size = new System.Drawing.Size(20, 155);
+            this.lineNumbersForRichText3.TabIndex = 1;
+            // 
+            // lineNumbersForRichText4
+            // 
+            this.lineNumbersForRichText4.AutoSizing = true;
+            this.lineNumbersForRichText4.BackgroundGradientAlphaColor = System.Drawing.Color.Transparent;
+            this.lineNumbersForRichText4.BackgroundGradientBetaColor = System.Drawing.Color.LightSteelBlue;
+            this.lineNumbersForRichText4.BackgroundGradientDirection = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.lineNumbersForRichText4.BorderLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText4.BorderLinesStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbersForRichText4.BorderLinesThickness = 1F;
+            this.animator1.SetDecoration(this.lineNumbersForRichText4, AnimatorNS.DecorationType.None);
+            this.lineNumbersForRichText4.DockSide = LineNumbersControlForRichTextBox.LineNumbersForRichText.LineNumberDockSide.Left;
+            this.lineNumbersForRichText4.GridLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText4.GridLinesStyle = System.Drawing.Drawing2D.DashStyle.Dot;
+            this.lineNumbersForRichText4.GridLinesThickness = 1F;
+            this.lineNumbersForRichText4.LineNumbersAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lineNumbersForRichText4.LineNumbersAntiAlias = true;
+            this.lineNumbersForRichText4.LineNumbersAsHexadecimal = false;
+            this.lineNumbersForRichText4.LineNumbersClippedByItemRectangle = true;
+            this.lineNumbersForRichText4.LineNumbersLeadingZeroes = true;
+            this.lineNumbersForRichText4.LineNumbersOffset = new System.Drawing.Size(0, 0);
+            this.lineNumbersForRichText4.Location = new System.Drawing.Point(0, 14);
+            this.lineNumbersForRichText4.Margin = new System.Windows.Forms.Padding(0);
+            this.lineNumbersForRichText4.MarginLinesColor = System.Drawing.Color.SlateGray;
+            this.lineNumbersForRichText4.MarginLinesSide = LineNumbersControlForRichTextBox.LineNumbersForRichText.LineNumberDockSide.Right;
+            this.lineNumbersForRichText4.MarginLinesStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.lineNumbersForRichText4.MarginLinesThickness = 1F;
+            this.lineNumbersForRichText4.Name = "lineNumbersForRichText4";
+            this.lineNumbersForRichText4.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.lineNumbersForRichText4.ParentRichTextBox = this.richTextBox4;
+            this.lineNumbersForRichText4.SeeThroughMode = false;
+            this.lineNumbersForRichText4.ShowBackgroundGradient = true;
+            this.lineNumbersForRichText4.ShowBorderLines = true;
+            this.lineNumbersForRichText4.ShowGridLines = true;
+            this.lineNumbersForRichText4.ShowLineNumbers = true;
+            this.lineNumbersForRichText4.ShowMarginLines = true;
+            this.lineNumbersForRichText4.Size = new System.Drawing.Size(20, 155);
+            this.lineNumbersForRichText4.TabIndex = 1;
             // 
             // Form1
             // 
@@ -382,7 +542,7 @@
             this.Controls.Add(this.groupBox1);
             this.animator1.SetDecoration(this, AnimatorNS.DecorationType.None);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Automerge";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -421,6 +581,10 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private AnimatorNS.Animator animator1;
+        private LineNumbersControlForRichTextBox.LineNumbersForRichText lineNumbersForRichText1;
+        private LineNumbersControlForRichTextBox.LineNumbersForRichText lineNumbersForRichText2;
+        private LineNumbersControlForRichTextBox.LineNumbersForRichText lineNumbersForRichText3;
+        private LineNumbersControlForRichTextBox.LineNumbersForRichText lineNumbersForRichText4;
 
     }
 }
