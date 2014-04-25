@@ -539,7 +539,7 @@ public class Diff
         string[] o_arr0 = o_list.ToArray();
         var chunks0 = FinalMerge(a_arr0, o_arr0, b_arr0, false);
         for (int i = chunks0.Count - 1; i >= 0; i--) { if (chunks0[i].Contains(StopMetka)) chunks0.RemoveAt(i); }
-
+//--------------------------------------------------------------------------------------------------
         var m12 = ListDiff2(o, a);
         for (int ii = 0; ii < m12.Count; ii++)
         {
@@ -566,7 +566,7 @@ public class Diff
         string[] b_arr1 = b_list.ToArray();
         var chunks1 = FinalMerge(a_arr1, o_arr1, b_arr1, false);
         for (int i = chunks1.Count - 1; i >= 0; i--) { if (chunks1[i].Contains(StopMetka))  chunks1.RemoveAt(i); }
-
+//--------------------------------------------------------------------------------------------------
         if (a.Length > b.Length)
         {
             var diff_m = a.Length - b.Length;
@@ -596,6 +596,7 @@ public class Diff
             if (chunks11.Count == min && flag_min) { ResultLines.AddRange(chunks11); flag_min = false; };
             if (chunks12.Count == min && flag_min) { ResultLines.AddRange(chunks12); flag_min = false; };
         };
+//--------------------------------------------------------------------------------------------------
         if (b.Length > a.Length)
         {
             var diff_m = b.Length - a.Length;

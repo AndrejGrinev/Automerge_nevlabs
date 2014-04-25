@@ -7,9 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient; 
-using System.Data.SqlTypes; 
-using Microsoft.SqlServer.Server;
+
 
 namespace Automerge_nevlabs
 {
@@ -20,43 +18,37 @@ namespace Automerge_nevlabs
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void SetToolTip(Control control, Color backcolor, Color forecolor, string name)
         {
             ToolTip t1 = new ToolTip();
             t1.IsBalloon = true;
-            t1.BackColor = Color.Wheat;
-            t1.ForeColor = Color.Red;
-            t1.SetToolTip(button5, "Загрузить обновленный файл");
-            ToolTip t2 = new ToolTip();
-            t2.IsBalloon = true;
-            t2.BackColor = Color.Wheat;
-            t2.ForeColor = Color.Red;
-            t2.SetToolTip(button6, "Загрузить обновленный файл");
-            ToolTip t3 = new ToolTip();
-            t3.IsBalloon = true;
-            t3.BackColor = Color.Wheat;
-            t3.ForeColor = Color.Red;
-            t3.SetToolTip(button7, "Загрузить обновленный файл");
-            ToolTip t5 = new ToolTip();
-            t5.IsBalloon = true;
-            t5.BackColor = Color.LavenderBlush;
-            t5.ForeColor = Color.Black;
-            t5.SetToolTip(button1, "Выберите файл-родитель");
-            ToolTip t6 = new ToolTip();
-            t6.IsBalloon = true;
-            t6.BackColor = Color.LavenderBlush;
-            t6.ForeColor = Color.Black;
-            t6.SetToolTip(button2, "Выберите файл-потомок 1");
-            ToolTip t7 = new ToolTip();
-            t7.IsBalloon = true;
-            t7.BackColor = Color.LavenderBlush;
-            t7.ForeColor = Color.Black;
-            t7.SetToolTip(button3, "Выберите файл-потомок 2");
-            ToolTip t8 = new ToolTip();
-            t8.IsBalloon = true;
-            t8.BackColor = Color.LavenderBlush;
-            t8.ForeColor = Color.Black;
-            t8.SetToolTip(button4, "Выберите или напишите файл-результат слияния ");
+            t1.BackColor = backcolor;
+            t1.ForeColor = forecolor;
+            t1.SetToolTip(control, name);
+        }
+            
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            SetToolTip(button5, Color.Wheat, Color.Red, "Загрузить обновленный файл");
+            
+            SetToolTip(button6, Color.Wheat, Color.Red, "Загрузить обновленный файл");
+           
+            SetToolTip(button7, Color.Wheat, Color.Red, "Загрузить обновленный файл");
+            
+            SetToolTip(button1, Color.LavenderBlush, Color.Black, "Выберите файл-родитель");
+            
+            SetToolTip(button2, Color.LavenderBlush, Color.Black, "Выберите файл-потомок 1");
+            
+            SetToolTip(button3, Color.LavenderBlush, Color.Black, "Выберите файл-потомок 2");
+            
+            SetToolTip(button4, Color.LavenderBlush, Color.Black, "Выберите или напишите файл-результат слияния ");
+
+            //animator1.SetDecoration(richTextBox1, AnimatorNS.DecorationType.BottomMirror);
+            animator1.Show(groupBox1, true, AnimatorNS.Animation.Scale);
+            animator1.Show(groupBox3, true, AnimatorNS.Animation.Scale);
+            animator1.Show(groupBox5, true, AnimatorNS.Animation.Scale);
+            animator1.Show(groupBox7, true, AnimatorNS.Animation.Scale);
+          
         }
 
         private void Download_A()
@@ -215,7 +207,6 @@ namespace Automerge_nevlabs
             Download_B();
             Download_C();
             Download_D();
-          //  UpdateEmployeeLogin(13, "ww");
         }
 
         private void OpenFile(String URL)
@@ -298,20 +289,5 @@ namespace Automerge_nevlabs
 
         #endregion
 
-  /*      public static void UpdateEmployeeLogin(SqlInt32 managerId, SqlString loginld)
-        {
-            SqlConnection conn = new SqlConnection(@"Server=PB;Integrated Security=True;Database=new_test");
-            using (
-            SqlCommand command = new SqlCommand("insert into  new_test.dbo.my_table1 values(@id,@name)", conn))
-            {
-                command.Parameters.AddWithValue("@id", 13);//Определяем параметр @id
-                command.Parameters.AddWithValue("@name", "hghghg");//Определяем параметр @id
-                command.Connection = conn;
-                conn.Open();
-                command.ExecuteNonQuery();
-                conn.Close();
-            }
-        }*/
-
-      }
+     }
 }
