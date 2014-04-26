@@ -7,13 +7,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using XCoolForm;
 
 namespace Automerge_nevlabs
 {
-    public partial class Form1 : Form
+    public partial class Form1 : XCoolForm.XCoolForm
     {
-        public Form1()
+        private XmlThemeLoader xtl = new XmlThemeLoader();
+
+        public Form1():base()
         {
             InitializeComponent();
         }
@@ -29,7 +31,16 @@ namespace Automerge_nevlabs
             
         private void Form1_Load(object sender, EventArgs e)
         {
-            SetToolTip(button5, Color.Wheat, Color.Red, "Загрузить обновленный файл");
+
+            this.TitleBar.TitleBarCaption = "MERGE OF 3 FILES";
+            this.TitleBar.TitleBarButtons[2].ButtonFillMode = XCoolForm.XTitleBarButton.XButtonFillMode.FullFill;
+            this.TitleBar.TitleBarButtons[1].ButtonFillMode = XCoolForm.XTitleBarButton.XButtonFillMode.FullFill;
+            this.TitleBar.TitleBarButtons[0].ButtonFillMode = XCoolForm.XTitleBarButton.XButtonFillMode.FullFill;
+
+            xtl.ThemeForm = this;
+            xtl.ApplyTheme(@"C:\Users\User\Documents\GitHub\Automerge_nevlabs\Automerge_nevlabs\Themes\StandardWindowsTheme.xml");
+
+           SetToolTip(button5, Color.Wheat, Color.Red, "Загрузить обновленный файл");
             
             SetToolTip(button6, Color.Wheat, Color.Red, "Загрузить обновленный файл");
            

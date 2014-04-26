@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Automerge_nevlabs.exe" size="249856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Automerge_nevlabs.exe" size="261632">
       <assemblyIdentity name="Automerge_nevlabs" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>shNXP0s+dQh0XyJ1/90PtdFScTs=</dsig:DigestValue>
+        <dsig:DigestValue>gFFl4bWiTy53QGlI5zRgp/94OUI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -75,6 +75,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
         <dsig:DigestValue>6NOuP8AHPMnIT/Qv2bLKuiPecmQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="XCoolForm.dll" size="61440">
+      <assemblyIdentity name="XCoolForm" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>XBsoD6Fw+cTBRIsDQUoF6ogG1ac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
